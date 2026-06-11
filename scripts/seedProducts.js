@@ -36,7 +36,7 @@ const seedDatabase = async () => {
     fs.writeFileSync(tempFilePath, cardsContent, 'utf8');
 
     // Require the products list
-    const cardDatas = require('./tempCards').slice(0, 5);
+    const cardDatas = require('./tempCards');
 
     // Clean up temporary file
     if (fs.existsSync(tempFilePath)) {
