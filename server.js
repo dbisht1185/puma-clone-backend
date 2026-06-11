@@ -78,9 +78,13 @@ app.use((err, req, res, next) => {
 
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => {
-  console.log(`\n=============================================`);
-  console.log(`PUMA CLONE BACKEND RUNNING ON PORT: ${PORT}`);
-  console.log(`ENVIRONMENT: ${process.env.NODE_ENV || 'development'}`);
-  console.log(`=============================================\n`);
-});
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => {
+    console.log(`\n=============================================`);
+    console.log(`PUMA CLONE BACKEND RUNNING ON PORT: ${PORT}`);
+    console.log(`ENVIRONMENT: ${process.env.NODE_ENV || 'development'}`);
+    console.log(`=============================================\n`);
+  });
+}
+
+module.exports = app;
