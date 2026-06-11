@@ -17,7 +17,7 @@ app.use(express.json());
 
 // Enable CORS
 app.use(cors({
-  origin: '*', // Allows access from any port (e.g. frontend Next.js on 3000)
+  origin: true,
   credentials: true
 }));
 
