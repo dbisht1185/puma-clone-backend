@@ -103,12 +103,12 @@ const ProductSchema = new mongoose.Schema({
   gender: {
     type: String,
     required: [true, 'Please specify gender target'],
-    enum: ['male', 'female', 'unisex', 'unisex-adults', 'boys', 'girls', 'kids', 'unisex-kids']
+    enum: ['male', 'female', 'unisex', 'unisex-adults', 'boys', 'girls', 'kids', 'unisex-kids', 'motorsports', 'sports', 'collaborations', 'outlets']
   },
   category: {
     type: String,
     default: 'footwear',
-    enum: ['footwear', 'apparel', 'accessories']
+    enum: ['footwear', 'apparel', 'accessories', 'motorsports', 'sports', 'collaborations', 'outlets']
   },
   isTrending: {
     type: Boolean,
